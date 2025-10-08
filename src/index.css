@@ -1,0 +1,19 @@
+/* src/index.css */
+
+/* 1. Esto elimina el padding/margin predeterminado del navegador
+      y asegura que los elementos se midan de forma intuitiva. 
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Esto asegura que el HTML y el Body usen el 100% del viewport (la ventana).
+*/
+:root, html, body {
+  width: 100%;
+  height: 100%;
+  /* Opcional: una fuente base */
+  font-family: sans-serif; 
+}
