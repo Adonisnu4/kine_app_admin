@@ -12,6 +12,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home
  from './views/Home';
 import PageNavbar from './components/PageNavbar';
+import VerUsuario from './views/VerUsuario';
+import ListaUsuarios from './views/ListaUsuarios';
+import Metricas from './views/Metricas';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,7 +24,9 @@ function App() {
        <Routes>
         {/* Route define una ruta específica: path y el componente a renderizar */}
         <Route path="/" element={<Home />} />
-        
+        <Route path="/lista-usuarios" element={<ListaUsuarios />} />
+        <Route path="/usuario/:id" element={<VerUsuario />} />
+        <Route path="/Metricas" element={<Metricas />} />
       </Routes>
     </>
   )
