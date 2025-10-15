@@ -14,8 +14,8 @@ function PageNavbar() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to={"/lista-usuarios"}>Lista usuarios</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown title="Metricas" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to={"/metricas"}>Metricas</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>

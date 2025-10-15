@@ -62,9 +62,8 @@ export const data = {
 };
 
 // --- Componente ---
-export default function Metricas() {
+function Metricas() {
   return <Bar options={options} data={data} />;
 }
 
-// Nota: Debes exportar el componente para usarlo en App.js
-// export default Metricas;
+export default Metricas

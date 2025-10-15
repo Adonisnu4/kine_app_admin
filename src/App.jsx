@@ -15,6 +15,7 @@ import PageNavbar from './components/PageNavbar';
 import VerUsuario from './views/VerUsuario';
 import ListaUsuarios from './views/ListaUsuarios';
 import Metricas from './views/Metricas';
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -26,7 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/lista-usuarios" element={<ListaUsuarios />} />
         <Route path="/usuario/:id" element={<VerUsuario />} />
-        <Route path="/Metricas" element={<Metricas />} />
+        <Route path="/metricas" element={<Metricas />} />
       </Routes>
     </>
   )
