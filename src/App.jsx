@@ -24,11 +24,13 @@ function App() {
     <>
     <PageNavbar />
        <HashRouter>
+        <Routes>
         {/* Route define una ruta específica: path y el componente a renderizar */}
         <Route path="/" element={<Home />} />
         <Route path="/lista-usuarios" element={<ListaUsuarios />} />
         <Route path="/usuario/:id" element={<VerUsuario />} />
         <Route path="/metricas" element={<Metricas />} />
+        </Routes>
       </HashRouter>
     </>
   )
