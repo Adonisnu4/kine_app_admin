@@ -48,7 +48,7 @@ jobs:
         with:
           # ¡CRUCIAL! Subir el contenido de la carpeta 'dist'
           # que es generada por 'npm run build'
-          path: 'dist' 
+          path: 'build' 
 
       - name: Deploy to GitHub Pages
         id: deployment
