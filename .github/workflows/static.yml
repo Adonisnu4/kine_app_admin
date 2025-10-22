@@ -1,0 +1,55 @@
+name: Deploy React/Vite to Pages
+
+on:
+  # Se ejecuta en cada push a la rama principal (main)
+  push:
+    branches: ["main"]
+
+  # Permite ejecutarlo manualmente
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build_and_deploy: # Cambiamos el nombre del job a algo más descriptivo
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # -- PASOS ESENCIALES PARA VITE/REACT --
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Puedes ajustar la versión de Node.js
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project (Vite)
+        run: npm run build
+      # --------------------------------------
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # ¡CRUCIAL! Subir el contenido de la carpeta 'dist'
+          # que es generada por 'npm run build'
+          path: 'dist' 
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
