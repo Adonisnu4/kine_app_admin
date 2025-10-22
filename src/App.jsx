@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap';
 
 //Router
 import { Routes, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 //views
 import Home
@@ -22,13 +23,13 @@ function App() {
   return (
     <>
     <PageNavbar />
-       <Routes>
+       <HashRouter>
         {/* Route define una ruta específica: path y el componente a renderizar */}
         <Route path="/" element={<Home />} />
         <Route path="/lista-usuarios" element={<ListaUsuarios />} />
         <Route path="/usuario/:id" element={<VerUsuario />} />
         <Route path="/metricas" element={<Metricas />} />
-      </Routes>
+      </HashRouter>
     </>
   )
 }
