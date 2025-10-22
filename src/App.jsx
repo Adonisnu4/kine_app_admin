@@ -18,22 +18,22 @@ import ListaUsuarios from './views/ListaUsuarios';
 import Metricas from './views/Metricas';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
     <PageNavbar />
-       <HashRouter>
-        <Routes>
+       <Routes basename="/kine_app_admin">
+        
         {/* Route define una ruta específica: path y el componente a renderizar */}
         <Route path="/" element={<Home />} />
         <Route path="/lista-usuarios" element={<ListaUsuarios />} />
         <Route path="/usuario/:id" element={<VerUsuario />} />
         <Route path="/metricas" element={<Metricas />} />
-        </Routes>
-      </HashRouter>
+        
+      </Routes>
     </>
   )
 }
 
-export default App
+export default App;

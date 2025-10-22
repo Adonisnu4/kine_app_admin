@@ -81,7 +81,7 @@ function ListaUsuarios() {
                         <tr key={usuario.id}>
                             <td> {usuario.id} </td> 
                             <td> 
-                                {usuario.nombre} {usuario.apellido || ''} 
+                                {usuario.nombre_completo || "No se pudo obtener nombre"}
                             </td>
                             
                             <td> {usuario.email || "Email no registrado"} </td> 
