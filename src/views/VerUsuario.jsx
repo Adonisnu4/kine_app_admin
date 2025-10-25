@@ -74,7 +74,7 @@ export default function VerUsuario() {
     return (
         <div style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '8px', maxWidth: '600px', margin: '20px auto' }}>
             <h2>👤 Perfil del Usuario</h2>
-            <h3>{usuario.nombre || "Sin Nombre"} {usuario.apellido}</h3>
+            <h3>{usuario.nombre_completo || "Error al cargar nombre"} </h3>
             
             <p><strong>ID de usuario:</strong> {usuario.id}</p>
             <p><strong>Email:</strong> {usuario.email || "No registrado"}</p>

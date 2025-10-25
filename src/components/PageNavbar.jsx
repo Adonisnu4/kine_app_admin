@@ -13,7 +13,9 @@ function PageNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link as={Link} to={"/lista-usuarios"}>Lista usuarios</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            
+            <Nav.Link as={Link} to={"/solicitudes-kinesiologos"}>Solicitudes kinesiologos</Nav.Link>
+            
             <NavDropdown title="Metricas" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to={"/metricas"}>Metricas</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
