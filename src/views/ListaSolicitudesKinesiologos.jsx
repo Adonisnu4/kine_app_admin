@@ -72,7 +72,7 @@ return (
             className="mb-3"
           >
             <Tab eventKey="solicitudes" title="Todas las solicitudes">
-              <SolicitudesPendientes solicitudes={requests} /> 
+              <TodasLasSolicitudes solicitudes={requests} /> 
             </Tab>
             <Tab eventKey="solicitudes-pendientes" title="Solicitudes pendientes">
               <SolicitudesPendientes solicitudes={requests} /> 
