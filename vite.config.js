@@ -6,6 +6,7 @@ const repoName = 'kine_app_admin'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],  
+  base: `/${repoName}/`, 
   build: {
     outDir: 'build' 
   }
