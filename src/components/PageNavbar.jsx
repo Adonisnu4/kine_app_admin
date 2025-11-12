@@ -8,10 +8,11 @@ function PageNavbar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Administrador </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+            <Nav.Link as={Link} to={"/"}>Inicio</Nav.Link>
             <Nav.Link as={Link} to={"/lista-usuarios"}>Lista usuarios</Nav.Link>
             
             <Nav.Link as={Link} to={"/solicitudes-kinesiologos"}>Solicitudes kinesiologos</Nav.Link>

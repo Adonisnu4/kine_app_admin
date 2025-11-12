@@ -21,7 +21,7 @@ function App() {
   
 
   return (
-    <>
+    <HashRouter>
     <PageNavbar />
        <Routes>
         
@@ -33,7 +33,7 @@ function App() {
         <Route path="/solicitudes-kinesiologos" element={<ListaSolicitudesKinesiologos />} />
         
       </Routes>
-    </>
+    </HashRouter>
   )
 }
 
